@@ -69,20 +69,20 @@ func main() {
 		//TODO Imprimir el precio del Bitcon
 
 		if btcPrice > maxPrice {
-		//TODO si el precio supera al maximo registrado
-		//actualizar el maximo
-		//e imprimir por pantalla una alerta
-	}
+			//TODO si el precio supera al maximo registrado
+			//actualizar el maximo
+			//e imprimir por pantalla una alerta
+		}
 
 		if btcPrice < minPrice {
-		//TODO si el precio es inferior al minimo registrado
-		//actualizar el minimo
-		//e imprimir por pantalla una alerta
-	}
+			//TODO si el precio es inferior al minimo registrado
+			//actualizar el minimo
+			//e imprimir por pantalla una alerta
+		}
 
-	if err := updateCSV(btcPrice, timestamp); err != nil {
-		fmt.Println("Error al actualizar el archivo CSV:", err)
-	}
+		if err := updateCSV(btcPrice, timestamp); err != nil {
+			fmt.Println("Error al actualizar el archivo CSV:", err)
+		}
 
 		time.Sleep(time.Minute) // Esperar un minuto antes de verificar nuevamente
 	}
